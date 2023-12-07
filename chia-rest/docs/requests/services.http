@@ -1,0 +1,7 @@
+@api_root={{$dotenv API_ROOT}}
+
+
+GET {{api_root}}/service-report
+Content-Type: application/json
+Authorization: Authorization: {{$dotenv API_KEY}}
+###

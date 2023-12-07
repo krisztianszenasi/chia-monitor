@@ -1,0 +1,16 @@
+@api_root={{$dotenv API_ROOT}}
+
+
+GET {{api_root}}/backup/current
+Authorization: {{$dotenv API_KEY}}
+###
+
+DELETE {{api_root}}/backup/current
+Authorization: {{$dotenv API_KEY}}
+###
+
+
+POST {{api_root}}/backup
+Authorization: {{$dotenv API_KEY}}
+###
+

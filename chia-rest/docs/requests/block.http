@@ -1,0 +1,6 @@
+@api_root={{$dotenv API_ROOT}}
+
+
+GET {{api_root}}/blocks?page=3&page_size=3
+Authorization: {{$dotenv API_KEY}}
+###

@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">ChiaMonitor</string>
+    <string name="no_blockchain_message">Can not retrieve blockchain state.\nThis is normal if the node still starting up.</string>
+    <string name="height">height</string>
+    <string name="max_cost">max cost</string>
+    <string name="difficulty">difficulty</string>
+    <string name="netspace">netspace</string>
+    <string name="nodeid">NodeID</string>
+    <string name="behind">%1$s behind</string>
+    <string name="synced">synced</string>
+    <string name="socket_connection_error_message">Could not connect to socket. Check your connection settings!</string>
+    <string name="wrong_api_key_message">Socket instantly disconnected. Are you sure your API key is right?</string>
+    <string name="host">host</string>
+    <string name="api_key">api key</string>
+    <string name="save">Save</string>
+    <string name="connection_settings_saved">Connection settings saved.</string>
+    <string name="delete_backup">Delete backup</string>
+    <string name="delete_backup_warning_text">Are you sure you want to delete your backup? It cannot be undone.</string>
+    <string name="confirm">Confirm</string>
+    <string name="dismiss">Dismiss</string>
+    <string name="create_backup">Create backup</string>
+    <string name="http_no_api_key">Could not get the current backup\nYou\'re api key is not set.</string>
+    <string name="http_invalid_api_key">Could not get the current backup\nYou\'re api key is invalid.</string>
+    <string name="http_wrong_host">Could not get the current backup\nYou\'re host is probably wrong.</string>
+</resources>
