@@ -19,7 +19,7 @@
     <string name="confirm">Confirm</string>
     <string name="dismiss">Dismiss</string>
     <string name="create_backup">Create backup</string>
-    <string name="http_no_api_key">Could not get the current backup\nYou\'re api key is not set.</string>
-    <string name="http_invalid_api_key">Could not get the current backup\nYou\'re api key is invalid.</string>
-    <string name="http_wrong_host">Could not get the current backup\nYou\'re host is probably wrong.</string>
+    <string name="http_no_api_key">nYou\'re api key is not set.</string>
+    <string name="http_invalid_api_key">You\'re api key is invalid.</string>
+    <string name="http_wrong_host">You\'re host is probably wrong.</string>
 </resources>

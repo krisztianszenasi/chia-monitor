@@ -163,7 +163,8 @@ fun MainScreen(
                         },
                         onInitialFetched = { serviceReports ->
                             appState = appState.copy(serviceReports = serviceReports)
-                        }
+                        },
+                        onError = onError,
                     )
                 }
 
