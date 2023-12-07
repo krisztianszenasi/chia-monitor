@@ -55,7 +55,7 @@ The file has to be made at the root of the `chia-rest` app.
 
 ## Android Studio
 
-Android Studio is needed for running the application inside of a simulator. Import the `ChiaMonitor` project via `OPEN` > `.../ChiaMonitor`. There is also an `.apk` file, so you can install it to a physical device as well.
+Android Studio is needed for running the application inside of a simulator. Import the `ChiaMonitor` project via `OPEN` > `.../ChiaMonitor`.
 
 # Starting the server
 
@@ -76,13 +76,12 @@ python chia_rest.py
 
 # Starting the app
 
-You can start the app be either using the simulator or installing it to a physical device.
+You can start the app in a simulator. The required API is 33 or above.
 
 ## Host
 
-If you choose the simulator than your host will be `http://10.0.2.2:5001` which is a virtual route for your machines loopback interface.
+The host should be `http://10.0.2.2:5001` which is a virtual route for your machines loopback interface.
 
-With the physical approach use your machines local ip address. For example `192.168.0.5`.
 
 ## Api key
 
