@@ -18,7 +18,7 @@ With `pyenv` and `pyenv-virtualenv` installed you can execute the following comm
 pyenv install 3.12.0
 
 # create a virtual environment for packages
-pyenv virtualenv chiarest3120 3.12.0
+pyenv virtualenv 3.12.0 chiarest3120
 
 # set the environment as local enviroment for chia-rest
 # navigate to the /chia-rest folder
