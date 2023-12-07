@@ -20,7 +20,7 @@ pyenv install 3.12.0
 # create a virtual environment for packages
 pyenv virtualenv 3.12.0 chiarest3120
 
-# set the environment as local enviroment for chia-rest
+# set the environment as local environment for chia-rest
 # navigate to the /chia-rest folder
 pyenv local chiarest3120 
 ```
