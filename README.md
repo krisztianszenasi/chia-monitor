@@ -1,8 +1,8 @@
-# Prerequisite
+# Prerequisites
 
 ## Chia blockchain
 
-`chia-rest` is supposed to expose metrics about a Chia node. In order the use the application you will need a running instance of a chia. I recommend installing it from [soruce](https://docs.chia.net/installation/#from-source).
+`chia-rest` is supposed to expose metrics about a Chia node. In order the use the application you will need a running instance of it. I recommend installing it from [soruce](https://docs.chia.net/installation/#from-source).
 
 ## Python
 
@@ -21,7 +21,7 @@ pyenv install 3.12.0
 pyenv virtualenv chiarest3120 3.12.0
 
 # set the environment as local enviroment for chia-rest
-cd chia-rest
+# navigate to the /chia-rest folder
 pyenv local chiarest3120 
 ```
 
@@ -30,7 +30,7 @@ pyenv local chiarest3120
 With all that settled you are ready to install the package requirements for `chia-rest`.
 
 ```
-cd chia-rest
+# navigate to the /chia-rest folder
 pip install -r requirements.txt
 ```
 
@@ -40,7 +40,8 @@ pip install -r requirements.txt
 Here is a sample of that.
 
 ```
-CHIA_APP_ROOT=.../chia-blockchian
+# required variables
+CHIA_APP_ROOT={root of you chia-blockchain app eq. .../chia-blockchain}
 API_KEY={secret key}
 
 # optional variables with their default values
@@ -49,7 +50,8 @@ CHIA_ROOT='$HOME/.chia/mainnet'
 RPC_ROOT=http://localhost
 ```
 
-Copy these lines into your `.env`. It should be at the root of the `chia-rest` app.
+Copy these lines into your `.env` and set the required variables to the appropriate values.
+The file has to be made at the root of the `chia-rest` app.
 
 ## Android Studio
 
@@ -60,7 +62,7 @@ Android Studio is needed for running the application inside of a simulator. Impo
 First you need to start the `chia-blockchain`
 
 ```
-cd chia-blockchian
+# navigate to the /chia-blockchain folder
 . ./activate
 chia start node
 ```
@@ -68,7 +70,7 @@ chia start node
 After that you can start the `chia-rest` server.
 
 ```
-cd chia-rest
+# navigate to the /chia-rest folder
 python chia_rest.py
 ```
 
@@ -78,7 +80,7 @@ You can start the app be either using the simulator or installing it to a physic
 
 ## Host
 
-If you choose the simulator than you host will be `http://10.0.2.2:5001` which is a virtual route for your machines loopback interface.
+If you choose the simulator than your host will be `http://10.0.2.2:5001` which is a virtual route for your machines loopback interface.
 
 With the physical approach use your machines local ip address. For example `192.168.0.5`.
 
