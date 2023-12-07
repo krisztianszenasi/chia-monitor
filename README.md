@@ -86,3 +86,12 @@ The host should be `http://10.0.2.2:5001` which is a virtual route for your mach
 ## Api key
 
 The api key should match the one you defined in your `.env` file.
+
+
+# Aditional thoughts
+
+In some cases the blockchain database can be corrupted. Simply delete the files
+from the `.chia/mainnet/db` folder and the node should make a new one.
+
+A freshly started needs some time to find the initial block for its database.
+No data on the blockchain state screen considered as normal in this scenario.
