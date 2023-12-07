@@ -21,7 +21,7 @@ import com.example.chiamonitor.domain.ServiceReport
 
 @Composable
 fun ServicesScreen(
-    chiaRestApi: ChiaRestApi,
+    chiaRestApi: ChiaRestApi?,
     servicesReport: List<ServiceReport>,
     onStartService: (ServiceReport) -> Unit,
     onStopService: (ServiceReport) -> Unit,
@@ -59,9 +59,14 @@ fun ServicesScreen(
 
 
 private suspend fun getServicesReport(
-    chiaRestApi: ChiaRestApi,
+    chiaRestApi: ChiaRestApi?,
     onError: (Int) -> Unit,
 ): ServicesReportDto? {
+    if (chiaRestApi == null) {
+        onError(R.string.connection_settings_are_not_set_yet)
+        return null
+    }
+
     try {
         val response = chiaRestApi.getServiceReport()
 

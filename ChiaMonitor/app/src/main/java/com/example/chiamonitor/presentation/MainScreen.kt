@@ -128,14 +128,14 @@ fun MainScreen(
 
                 composable(BottomNavItem.BackupScreen.route) {
                     BackupScreen(
-                        chiaRestApi = chiaRestApi!!,
+                        chiaRestApi = chiaRestApi,
                         backupProgress = appState.backupProgress,
                         onError = onError,
                     )
                 }
                 composable(BottomNavItem.ServicesScreen.route) {
                     ServicesScreen(
-                        chiaRestApi = chiaRestApi!!,
+                        chiaRestApi = chiaRestApi,
                         servicesReport = appState.serviceReports,
                         onStartService = { serviceReport ->
                             appState = appState.copy(

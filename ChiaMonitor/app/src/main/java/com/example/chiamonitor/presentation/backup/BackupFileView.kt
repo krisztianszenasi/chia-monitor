@@ -28,20 +28,16 @@ import java.lang.IllegalArgumentException
 
 @Composable
 fun BackupFileView(
-    chiaRestApi: ChiaRestApi,
+    chiaRestApi: ChiaRestApi?,
     onError: (Int) -> Unit
 ) {
     var backup by remember { mutableStateOf<BackupResponse?>(null) }
-//    var chiaRestApi by remember { mutableStateOf<ChiaRestApi?>(null) }
     var showDeleteDialog by remember { mutableStateOf(false) }
     val scope = rememberCoroutineScope()
 
     LaunchedEffect(Unit) {
-//        if(chiaRestApi == null) {
-//            chiaRestApi = buildChiaRestApi(connectionSettings)
-//        }
         backup = getBackup(
-            chiaRestApi = chiaRestApi!!,
+            chiaRestApi = chiaRestApi,
             onError = onError
         )
     }
@@ -83,9 +79,14 @@ fun BackupFileView(
 
 
 private suspend fun getBackup(
-    chiaRestApi: ChiaRestApi,
+    chiaRestApi: ChiaRestApi?,
     onError: (Int) -> Unit,
 ): BackupResponse? {
+    if (chiaRestApi == null) {
+        onError(R.string.connection_settings_are_not_set_yet)
+        return null
+    }
+
     try {
         val response = chiaRestApi.getBackup()
 

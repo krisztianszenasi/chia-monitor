@@ -13,7 +13,7 @@ import com.example.chiamonitor.settings.ConnectionSettings
 
 @Composable
 fun BackupScreen(
-    chiaRestApi: ChiaRestApi,
+    chiaRestApi: ChiaRestApi?,
     backupProgress: BackupProgress?,
     onError: (Int) -> Unit,
 ) {
