@@ -12,6 +12,7 @@ def stop_chia(service: str) -> subprocess.Popen:
     """Stop the given chia services."""
     return run_script(name='stop_chia.sh', args=[service])
 
+
 def get_running_services() -> subprocess.Popen:
     """Get the list of running services."""
     return run_script(name='running_services.sh')

@@ -1,5 +1,8 @@
 """Daemon related rpc requests."""
 
+from app.rpc_requests.utils import send_rpc_through_script_handler
+from app.scripts.script_handler import (get_running_services, start_chia,
+                                        stop_chia)
 from app.utilities.rpc_request import send_rpc_request
 
 
@@ -14,10 +17,7 @@ def send_rpc_running_services() -> dict | None:
     Returns:
         dict | None: the daemon's rpc response
     """
-    return send_rpc_request(
-        service='daemon',
-        endpoint='running_services',
-    )
+    return send_rpc_through_script_handler(get_running_services)
 
 
 def send_rpc_start_service(service_name: str) -> dict | None:
@@ -31,11 +31,7 @@ def send_rpc_start_service(service_name: str) -> dict | None:
     Returns:
         dict | None: the daemon's rpc response
     """
-    return send_rpc_request(
-        service='daemon',
-        endpoint='start_service',
-        data={'service': service_name},
-    )
+    return send_rpc_through_script_handler(start_chia, script_args=[service_name])
 
 
 def send_rpc_stop_service(service_name: str) -> dict | None:
@@ -49,8 +45,4 @@ def send_rpc_stop_service(service_name: str) -> dict | None:
     Returns:
         dict | None: the daemon's rpc response
     """
-    return send_rpc_request(
-        service='daemon',
-        endpoint='stop_service',
-        data={'service': service_name},
-    )
+    return send_rpc_through_script_handler(stop_chia, script_args=[service_name])
