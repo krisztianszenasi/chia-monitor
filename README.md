@@ -2,7 +2,9 @@
 
 ## Chia blockchain
 
-`chia-rest` is supposed to expose metrics about a Chia node. In order the use the application you will need a running instance of it. I recommend installing it from [soruce](https://docs.chia.net/installation/#from-source).
+`chia-rest` is designed to expose metrics from a Chia node. To use the
+application, you'll need a running instance of the node. I recommend installing
+it from [soruce](https://docs.chia.net/installation/#from-source).
 
 ## Python
 
