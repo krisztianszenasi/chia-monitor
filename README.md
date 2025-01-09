@@ -5,6 +5,9 @@
 ChiaMonitor is a full-stack Android application designed to monitor various
 data related to a Chia node and to make backups for the blockchain database.
 
+## Technologies utilized
+
+The app is developed using Jetpack Compose, Dagger Hilt, the Paging Library, and Retrofit, while the backend is implemented in Python with Flask.
 
 ## Prerequisites
 
